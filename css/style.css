@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+
+input {
+  padding: 0;
+}
+
+:root {
+  --mainPink: #ef7998;
+  --mainYellow: rgb(249, 228, 148);
+  --mainWhite: #fff;
+  --mainBlack: #000;
+  --yellowTrans: rgba(249, 228, 148, 0.5);
+  --mainGrey: rgb(238, 238, 238);
+}
+
+body {
+  font-family: "Kaushan Script", cursive;
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+  user-select: none;
+}
+
+.wrapper {
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--mainWhite);
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: var(--mainYellow);
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.cards__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 200px;
+  height: 100%;
+  background-color: var(--mainWhite);
+  align-items: center;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+
+.cards__item_img {
+  width: 150px;
+}
+
+.cards__item_price {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.btn {
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--mainPink);
+  padding: 10px 50px;
+  border-radius: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(241, 115, 115);
+  padding: 10px 60px;
+  border-radius: 20px;
+}
+
+.modal-body {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--yellowTrans);
+  z-index: 99999;
+}
+
+.modal-body > div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 10% auto;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+}
+
+.close {
+  float: right;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.modal-form {
+  background: #f8f4e5;
+  padding: 50px 100px;
+  border: 2px solid black;
+  box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px black;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font-size: 14pt;
+  line-height: 28pt;
+  font-family: "Fjalla One";
+  margin-bottom: 28pt;
+  border: none;
+  border-bottom: 5px solid black;
+  background: #f8f4e5;
+  min-width: 250px;
+  padding-left: 5px;
+  outline: none;
+  color: black;
+}
+
+input:focus {
+  border-bottom: 5px solid #ffa580;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  line-height: 28pt;
+  padding: 0 20px;
+  background: #ffa580;
+  letter-spacing: 2px;
+  transition: 0.2s all ease-in-out;
+  outline: none;
+  border: 1px solid black;
+  box-shadow: 3px 3px 1px #95a4ff, 3px 3px 1px 1px black;
+}
+button:hover {
+  background: black;
+  color: white;
+  border: 1px solid black;
+}
+
+::selection {
+  background: #ffc8ff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  border-bottom: 5px solid #95a4ff;
+  -webkit-text-fill-color: #2a293e;
+  -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
